@@ -1,0 +1,1136 @@
+
+{
+
+    "Projets": [
+      {
+        "title": "Portfolio personnel",
+        "description": "Créez un site pour présenter vos projets et compétences en HTML, CSS, et JavaScript.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Calculatrice",
+        "description": "Développez une calculatrice simple avec des boutons interactifs pour effectuer les opérations de base.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Jeu du morpion (Tic-Tac-Toe)",
+        "description": "Construisez un jeu interactif avec JavaScript permettant de jouer contre un autre humain ou l’ordinateur.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Générateur de citations",
+        "description": "Affichez une citation aléatoire à chaque clic, en proposant un design simple et épuré.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Tableau blanc interactif",
+        "description": "Permettez aux utilisateurs de dessiner en ligne avec différents pinceaux et couleurs, en utilisant HTML5 Canvas.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Minuteur Pomodoro",
+        "description": "Implémentez des cycles de travail et de pause, avec affichage du temps restant et alertes visuelles ou sonores.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Page météo",
+        "description": "Intégrez une API météo pour afficher les prévisions locales et un design adapté aux conditions climatiques.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Jeu Pierre-Feuille-Ciseaux",
+        "description": "Créez un jeu où l’utilisateur affronte l’ordinateur, avec un score affiché dynamiquement.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Simulateur météo visuel",
+        "description": "Affichez des animations (pluie, soleil, neige) en fonction de données météo ou de sélections utilisateur.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Générateur CSS en ligne",
+        "description": "Créez une interface où les utilisateurs peuvent générer du code CSS (ombres, dégradés, etc.) et prévisualiser le rendu.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Portfolio interactif animé",
+        "description": "Ajoutez des animations et transitions pour rendre un portfolio plus attrayant et dynamique.",
+        "category": "Frontend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Système de gestion d'utilisateurs",
+        "description": "Implémentez l'inscription, la connexion et la gestion des profils via un back-end simple (Node.js ou Python).",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "API REST pour un blog",
+        "description": "Créez une API permettant de gérer des articles, des commentaires et des utilisateurs, exposant des routes CRUD.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Système d'inventaire",
+        "description": "Gérez les stocks d’un magasin (ajout, suppression, mise à jour) via un back-end et persistance en base de données.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Gestionnaire d'abonnements SaaS",
+        "description": "Créez une API pour gérer des abonnements mensuels avec paiements simulés et expiration automatique.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Chatbot serveur simple",
+        "description": "Développez un chatbot minimaliste en Node.js ou Python, répondant à des questions courantes via console ou API.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Agrégateur RSS personnalisé",
+        "description": "Construisez un outil qui collecte et affiche les flux RSS d’actualités et les regroupe en un seul point d’accès.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Gestionnaire de tâches (Back-end)",
+        "description": "Créez une API REST pour organiser des tâches avec Node.js ou Python, stockées dans une base (MongoDB, SQL, etc.).",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Service d'authentification JWT",
+        "description": "Implémentez un système sécurisé basé sur JSON Web Tokens pour gérer la connexion et l’autorisation.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Système de réservation",
+        "description": "Proposez un back-end permettant de gérer les réservations (salles, événements, etc.) avec calendriers et créneaux.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "API de conversion monétaire",
+        "description": "Connectez-vous à un service tiers pour convertir les devises en temps réel et exposez un endpoint simple.",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application CRUD basique",
+        "description": "Implémentez les opérations Create, Read, Update, Delete sur un modèle simple (ex. liste de produits).",
+        "category": "Backend Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Blog complet (Frontend + Backend)",
+        "description": "Combinez un framework front (React/Vue.js) avec un back-end (Node.js/Django) pour gérer articles, commentaires et utilisateurs.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "E-commerce minimaliste",
+        "description": "Créez une interface d'achat avec un panier et un paiement simulé, pour découvrir les fondamentaux du commerce en ligne.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Forum communautaire",
+        "description": "Développez une plateforme où les utilisateurs peuvent poster et répondre à des sujets, avec gestion des catégories.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Site de recettes",
+        "description": "Affichez des recettes avec des catégories et une recherche filtrée (par ingrédient, type de plat, etc.).",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Clonage d’un site populaire (ex: Medium)",
+        "description": "Reproduisez les fonctionnalités principales d’un site connu (publication d’articles, commentaires, système d’abonnement).",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Tableau Kanban",
+        "description": "Développez un outil visuel pour organiser les tâches, inspiré de Trello, avec drag-and-drop et colonnes.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Réseau social minimaliste",
+        "description": "Permettez aux utilisateurs de créer des profils, poster des messages, et liker ou commenter ceux des autres.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Tableau comparatif interactif",
+        "description": "Créez un tableau dynamique où les utilisateurs comparent des produits ou services et voient instantanément les différences.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Outil collaboratif simplifié (ex: Google Docs)",
+        "description": "Permettez à plusieurs utilisateurs d’éditer un même texte en temps réel, avec mise à jour automatique.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Plateforme d'apprentissage en ligne",
+        "description": "Hébergez des cours, suivez la progression des utilisateurs et proposez des quiz basiques.",
+        "category": "Web Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Bloc-notes personnalisé",
+        "description": "Une application de bureau simple pour écrire et sauvegarder des notes, via une interface GUI (Tkinter, etc.).",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Lecteur MP3",
+        "description": "Interface pour lire des fichiers audio locaux, gérer la playlist et contrôler la lecture (pause, avance).",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Gestionnaire de dépenses",
+        "description": "Suivez revenus et dépenses mensuels, affichez des graphiques et enregistrez les données dans un fichier ou une DB locale.",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application de calendrier",
+        "description": "Planifiez des événements et recevez des notifications locales ou des rappels personnalisés.",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Jeu Snake classique",
+        "description": "Recréez ce jeu populaire en Python (avec Pygame) ou en Java, en gérant la collision et le score.",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Calculateur scientifique avancé",
+        "description": "Ajoutez des fonctions trigonométriques, logarithmiques, etc., dans une interface desktop claire et ergonomique.",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Lecteur vidéo local",
+        "description": "Une application capable de lire des fichiers vidéo depuis le disque, avec contrôle de lecture et de volume.",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application pour organiser ses photos",
+        "description": "Classez automatiquement les photos par date ou catégorie, avec une interface pour parcourir les albums.",
+        "category": "Desktop Application Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "To-Do List mobile",
+        "description": "Gérez vos tâches sur Android/iOS (React Native ou Flutter) avec ajout, suppression, marquage comme terminé.",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application météo mobile",
+        "description": "Affichez les prévisions locales via une API tierce et proposez des icônes adaptées au temps (soleil, pluie, etc.).",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Quiz interactif",
+        "description": "Créez un jeu-questionnaire éducatif sur mobile, avec score en temps réel et un classement final.",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Tracker d'habitudes",
+        "description": "Suivez vos habitudes quotidiennes, envoyez des rappels push et affichez des statistiques de progression.",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application de méditation",
+        "description": "Ajoutez des sons relaxants et un minuteur intégré pour aider l’utilisateur à suivre ses séances.",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Journal intime numérique sécurisé",
+        "description": "Une application mobile où l’utilisateur peut écrire ses pensées, protégées par un mot de passe ou un PIN.",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application Rappels vocaux",
+        "description": "Permettez aux utilisateurs d’enregistrer des rappels vocaux et envoyez des notifications programmées.",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Tracker GPS basique",
+        "description": "Suivez la position actuelle de l’utilisateur et affichez-la sur une carte, avec historique des déplacements.",
+        "category": "Mobile App Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Stockage cloud personnel",
+        "description": "Implémentez un service simple pour télécharger et sauvegarder des fichiers (par exemple sur AWS S3 ou équivalent).",
+        "category": "Cloud Computing",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Analyseur de logs serveur",
+        "description": "Traitez et visualisez les journaux d'activité d’un serveur dans le cloud pour en tirer des statistiques.",
+        "category": "Cloud Computing",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Déploiement CI/CD automatisé",
+        "description": "Configurez un pipeline pour déployer automatiquement une application web sur le cloud après chaque push.",
+        "category": "Cloud Computing",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Service d'hébergement vidéo simplifié",
+        "description": "Développez une plateforme cloud où les utilisateurs peuvent télécharger et visionner des vidéos en streaming basique.",
+        "category": "Cloud Computing",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Outil collaboratif basé sur Firebase",
+        "description": "Utilisez Firebase pour créer une application collaborative (par ex. tableau Kanban) en temps réel.",
+        "category": "Cloud Computing",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Système de gestion scolaire complet",
+        "description": "Gérez les étudiants, les cours et les enseignants avec un front-end (React ou Vue) et un back-end (Node.js/Django).",
+        "category": "Full Stack Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application de chat en temps réel",
+        "description": "Intégrez WebSockets pour permettre aux utilisateurs d’échanger des messages instantanés, avec affichage du statut en ligne.",
+        "category": "Full Stack Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Clonage d’Instagram simplifié",
+        "description": "Permettez le téléchargement d’images, l’ajout de likes/commentaires et la gestion de profils via MongoDB et Express.",
+        "category": "Full Stack Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Plateforme multi-utilisateurs (ex: Airbnb simplifié)",
+        "description": "Les utilisateurs peuvent publier des annonces et réserver. Gérez le front-end et le back-end connectés.",
+        "category": "Full Stack Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Tableau Kanban collaboratif",
+        "description": "Créez une application web où plusieurs utilisateurs gèrent leurs tâches ensemble en temps réel (drag-and-drop).",
+        "category": "Full Stack Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Application de gestion de bibliothèque",
+        "description": "Implémentez une plateforme pour gérer les livres disponibles, les emprunts et les retours, avec un front et un back robustes.",
+        "category": "Full Stack Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "API météo personnalisée",
+        "description": "Fournissez des données météorologiques basées sur la localisation de l’utilisateur en utilisant un service tierce (OpenWeatherMap).",
+        "category": "API Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "API pour recettes culinaires",
+        "description": "Permettez aux développeurs d’accéder à une base de données de recettes via votre API RESTful (endpoints CRUD).",
+        "category": "API Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "API de gestion de films",
+        "description": "Créez une API permettant d’ajouter, de supprimer et de rechercher des films dans une base de données.",
+        "category": "API Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "API d’analyse textuelle",
+        "description": "Développez une API qui analyse du texte pour identifier la tonalité (positive, négative, neutre) en renvoyant un score.",
+        "category": "API Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Générateur de mots de passe sécurisés",
+        "description": "Créez un outil qui génère des mots de passe aléatoires robustes, avec options de longueur et de caractères spéciaux.",
+        "category": "Security Software Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Scanner de vulnérabilités web basique",
+        "description": "Identifiez les failles courantes (XSS, SQL Injection) dans un site donné, en réalisant des tests simples.",
+        "category": "Security Software Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Outil d'encodage/décodage cryptographique basique",
+        "description": "Implémentez un service pour encoder/décoder du texte via des algorithmes simples (chiffrement César, Base64, etc.).",
+        "category": "Security Software Development",
+        "difficulty": "easy"
+      },
+      {
+        "title": "Analyseur DNS sécurisé",
+        "description": "Un outil qui inspecte les enregistrements DNS d’un site web pour détecter des anomalies ou vulnérabilités basiques.",
+        "category": "Security Software Development",
+        "difficulty": "easy"
+      },
+
+
+
+
+
+      {
+        "title": "Dashboard interactif",
+        "description": "Créez un tableau de bord avec des graphiques interactifs (Chart.js, D3.js, etc.) pour visualiser des données en temps réel ou statiques.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Clonage d’un site e-commerce (Frontend)",
+        "description": "Reproduisez l’interface utilisateur d’un site comme Amazon ou eBay, en vous concentrant sur le design et la navigation.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Éditeur de texte en ligne",
+        "description": "Implémentez un éditeur riche (type TinyMCE) avec options de mise en forme (gras, italique, couleurs, etc.) et export en HTML.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Visualiseur de données JSON",
+        "description": "Affichez des données JSON sous forme d’arbre interactif, permettant de replier/déplier les nœuds et de filtrer certains champs.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Générateur de CV",
+        "description": "Permettez aux utilisateurs de renseigner leurs informations et de télécharger un CV formaté en PDF.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Quiz dynamique avec chronomètre",
+        "description": "Créez un quiz avec des questions chronométrées et un score final, en utilisant JavaScript pour la logique et le timing.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application de dessin avancée",
+        "description": "Ajoutez des fonctionnalités comme des calques, des formes prédéfinies, des sélections, et une gomme, via Canvas ou SVG.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Galerie photo avec animations",
+        "description": "Développez une galerie photo avec des transitions fluides, effets CSS et un affichage pleine page au clic.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de notation par étoiles",
+        "description": "Permettez aux utilisateurs d’évaluer des produits ou services avec un système d’étoiles interactives, et calculez la note moyenne.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Outil de comparaison visuelle",
+        "description": "Comparez deux images côte à côte avec une barre glissante permettant de révéler plus ou moins l’une des deux images.",
+        "category": "Frontend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système d’authentification OAuth2",
+        "description": "Implémentez une connexion via Google ou Facebook, stockez le jeton d’accès et gérez la session de l’utilisateur.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "API GraphQL pour un blog",
+        "description": "Créez une API GraphQL permettant de gérer les articles, les utilisateurs et les commentaires de manière flexible.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Service de notification par email",
+        "description": "Développez un service pour envoyer automatiquement des emails (ex : NodeMailer) suite à certains événements (inscription, commande, etc.).",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Gestionnaire d’événements récurrents",
+        "description": "Implémentez un back-end permettant de planifier des événements hebdomadaires ou mensuels, avec rappels automatiques.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "API pour gestion d’inventaire avancée",
+        "description": "Ajoutez des fonctionnalités comme les seuils d’alerte lorsque les stocks sont trop bas, et la gestion de fournisseurs.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de gestion de fichiers",
+        "description": "Permettez aux utilisateurs d’uploader, renommer et supprimer leurs fichiers via une API REST, en stockant les métadonnées en DB.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de gestion multi-rôles",
+        "description": "Implémentez un système où les rôles (admin, utilisateur, etc.) ont différents niveaux d’accès aux ressources.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Service de messagerie asynchrone",
+        "description": "Utilisez RabbitMQ ou Kafka pour gérer la communication entre microservices ou tâches asynchrones.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de réservation complexe",
+        "description": "Gérez la disponibilité en temps réel pour plusieurs ressources (ex : salles, véhicules), avec annulation et reprogrammation.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "API RESTful avec pagination et filtrage avancés",
+        "description": "Autorisez l’utilisateur à paginer les résultats et à filtrer selon différents critères, pour améliorer l’efficacité des requêtes.",
+        "category": "Backend Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Clonage simplifié d’un réseau social (ex: Twitter)",
+        "description": "Permettez aux utilisateurs de publier des tweets, liker et suivre d’autres comptes, avec une interface web responsive.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application de gestion financière personnelle",
+        "description": "Suivez les revenus et dépenses, affichez des graphiques interactifs et proposez un tableau de bord complet.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Plateforme collaborative pour équipes (type Slack)",
+        "description": "Implémentez la messagerie instantanée, le partage de fichiers et la création de canaux de discussion.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application web pour apprentissage linguistique",
+        "description": "Proposez des exercices interactifs, des quiz et un suivi de progression pour l’apprentissage d’une langue étrangère.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de réservation en ligne (ex: restaurants)",
+        "description": "Frontend + backend permettant aux utilisateurs de réserver une table, avec confirmation et gestion des créneaux horaires.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Plateforme minimaliste pour freelances (type Upwork)",
+        "description": "Permettez aux freelances et clients de se connecter, poster des offres et candidater aux projets.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application web pour sondages dynamiques",
+        "description": "Créez et partagez des sondages en ligne, affichez les résultats en temps réel avec des graphiques simples.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Clonage simplifié d’un site vidéo (type YouTube)",
+        "description": "Téléchargez des vidéos, affichez-les dans une galerie, et implémentez un lecteur avec des fonctionnalités de base.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application web pour gestion de bibliothèque publique",
+        "description": "Gérez les emprunts, retours et réservations de livres, avec une interface utilisateur intuitive et un back-end relié à une base de données.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Tableau Kanban avancé",
+        "description": "Ajoutez la possibilité d’attribuer des tâches à plusieurs utilisateurs, et suivez leur progression en temps réel.",
+        "category": "Web Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Gestionnaire avancé de notes personnelles",
+        "description": "Ajoutez la recherche par mots-clés et la synchronisation cloud pour consulter vos notes sur plusieurs appareils.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Lecteur multimédia personnalisé",
+        "description": "Incluez la lecture audio/vidéo, un égaliseur et la gestion de playlists locales, le tout dans une interface desktop.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application pour suivi du sommeil",
+        "description": "Analysez les données saisies par l’utilisateur sur son sommeil quotidien, générez des statistiques et conseils basiques.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Gestionnaire local pour mots de passe sécurisés",
+        "description": "Stockez les mots de passe de l’utilisateur dans un fichier crypté localement, avec authentification à l’ouverture.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Outil d’analyse statistique basique",
+        "description": "Traitez les fichiers CSV pour afficher graphiques et statistiques simples, avec exportation des résultats.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Jeu 2D simple (type Flappy Bird)",
+        "description": "Développez un jeu desktop avec scoring local enregistré et mécanique de jeu simple, en utilisant un framework comme Pygame.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application météo desktop avancée",
+        "description": "Affichez des prévisions horaires et hebdomadaires avec animations visuelles et possibilité de sauvegarder des emplacements favoris.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Client FTP personnalisé",
+        "description": "Connectez-vous à un serveur FTP, listez les fichiers, et proposez le téléchargement ou l’upload via une interface desktop.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Gestionnaire local d’images",
+        "description": "Classez, renommez et appliquez des filtres à vos photos locales, avec aperçu et organisation en albums.",
+        "category": "Desktop Application Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application mobile pour recettes culinaires personnalisées",
+        "description": "Permettez aux utilisateurs d’ajouter leurs propres recettes, de rechercher par ingrédients et de sauvegarder leurs favoris.",
+        "category": "Mobile App Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Tracker fitness personnalisé",
+        "description": "Enregistrez les séances d’entraînement, affichez des statistiques hebdomadaires ou mensuelles, et envoyez des rappels.",
+        "category": "Mobile App Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application mobile pour journaux audio personnels",
+        "description": "Enregistrez vos pensées sous forme vocale, classez-les par date, et proposez une interface de lecture simple.",
+        "category": "Mobile App Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application mobile pour suivi budgétaire mensuel",
+        "description": "Catégorisez vos dépenses, affichez-les sous forme de graphiques, et définissez des objectifs de dépenses.",
+        "category": "Mobile App Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Jeu mobile simple type '2048' ou 'Sudoku'",
+        "description": "Implémentez un jeu addictif sur mobile, avec sauvegarde de la meilleure performance et un design épuré.",
+        "category": "Mobile App Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application mobile pour gestion collaborative des tâches familiales",
+        "description": "Partagez une liste commune entre plusieurs membres de la famille, synchronisée via Firebase ou un autre backend en temps réel.",
+        "category": "Mobile App Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Service cloud pour sauvegarde automatique locale/cloud hybride",
+        "description": "Synchronisez automatiquement certains fichiers locaux vers le cloud (AWS S3, Azure Blob, etc.), avec interface de configuration.",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application de gestion des logs dans le cloud",
+        "description": "Collectez et affichez les journaux d’activité d’une application hébergée, et générez des alertes en cas d’erreur critique.",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de déploiement automatisé",
+        "description": "Configurez un pipeline CI/CD pour déployer une application web sur AWS, Azure ou Google Cloud après chaque commit.",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Plateforme de chat en temps réel basée sur le cloud",
+        "description": "Utilisez Firebase ou AWS AppSync pour gérer les messages instantanés et l’authentification des utilisateurs.",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Service de conversion vidéo dans le cloud",
+        "description": "Permettez aux utilisateurs de télécharger une vidéo et de la convertir dans un autre format en arrière-plan.",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application cloud pour gestion d’équipe",
+        "description": "Implémentez un outil collaboratif avec gestion de tâches, calendrier et chat, toutes les données étant stockées en cloud.",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Stockage d’images avec compression automatique",
+        "description": "Hébergez les images téléchargées par les utilisateurs, compressez-les avant stockage pour réduire l’espace disque.",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Analyseur de données Big Data simplifié",
+        "description": "Traitez un jeu de données volumineux pour en extraire des statistiques clés, en vous appuyant sur un service cloud (ex : AWS EMR).",
+        "category": "Cloud Computing",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application de réservation d’hôtels",
+        "description": "Permettez aux utilisateurs de rechercher, réserver et payer des chambres, avec un front-end et un back-end connectés.",
+        "category": "Full Stack Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Clonage simplifié d’un site de streaming musical (type Spotify)",
+        "description": "Gérez les playlists, les artistes et les titres, avec lecture en continu et historique d’écoute.",
+        "category": "Full Stack Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Plateforme d’apprentissage en ligne avancée (type Udemy)",
+        "description": "Intégrez des cours vidéo, des quiz interactifs et un système de progression, avec gestion des comptes utilisateurs.",
+        "category": "Full Stack Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application de gestion immobilière",
+        "description": "Gérez les annonces, les visites programmées, et proposez un tableau de bord pour les propriétaires et locataires.",
+        "category": "Full Stack Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Plateforme pour événements locaux",
+        "description": "Permettez aux utilisateurs d’organiser ou de rejoindre des événements dans leur région, avec un système de géolocalisation.",
+        "category": "Full Stack Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Application collaborative pour écrivains",
+        "description": "Un outil où plusieurs auteurs peuvent écrire ensemble en temps réel sur un même document, avec historique des modifications.",
+        "category": "Full Stack Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de gestion des tâches avec rappels automatiques",
+        "description": "Ajoutez des notifications push ou email pour rappeler les échéances, et un tableau de bord pour visualiser l’avancement.",
+        "category": "Full Stack Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "API pour gestion d’un système de livraison",
+        "description": "Gérez les commandes, les livraisons et le suivi en temps réel via une API RESTful, avec mise à jour du statut de livraison.",
+        "category": "API Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "API pour gestion d’un portefeuille crypto-monnaie",
+        "description": "Permettez aux utilisateurs de suivre leurs investissements en crypto-monnaies, avec mises à jour de la valeur en temps réel.",
+        "category": "API Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "API pour analyse sentimentale",
+        "description": "Analysez du texte soumis par l’utilisateur pour déterminer la tonalité (positive, négative ou neutre), en renvoyant un score agrégé.",
+        "category": "API Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "API pour gestion d’une bibliothèque numérique",
+        "description": "Fournissez un accès aux livres numériques avec recherche par auteur, titre ou genre, et gérez les emprunts et retours virtuels.",
+        "category": "API Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Scanner basique pour failles XSS/SQL Injection",
+        "description": "Développez un outil qui tente d’injecter du code malveillant dans un formulaire pour détecter les vulnérabilités.",
+        "category": "Security Software Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Système de détection d’intrusion simplifié (IDS)",
+        "description": "Analysez les journaux réseau pour repérer des comportements suspects (requêtes inhabituelles, adresses IP bannies, etc.).",
+        "category": "Security Software Development",
+        "difficulty": "medium"
+      },
+      {
+        "title": "Outil pour surveiller les attaques par force brute",
+        "description": "Créez un programme qui surveille les tentatives répétées de connexion et envoie des alertes en cas de pics d’attaques.",
+        "category": "Security Software Development",
+        "difficulty": "medium"
+      },
+    
+    
+    
+      {
+        "title": "Éditeur graphique en ligne",
+        "description": "Créez un éditeur de type Canva avec des outils avancés tels que le redimensionnement, les calques et les filtres.",
+        "category": "Frontend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Clonage d’un tableau blanc collaboratif",
+        "description": "Développez un tableau blanc interactif permettant à plusieurs utilisateurs de dessiner en temps réel sur la même interface.",
+        "category": "Frontend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Visualisation de données 3D",
+        "description": "Implémentez des graphiques 3D interactifs en utilisant des technologies comme WebGL ou Three.js pour visualiser des datasets complexes.",
+        "category": "Frontend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Constructeur de site web drag-and-drop",
+        "description": "Permettez aux utilisateurs de créer un site en glissant-déposant des composants (textes, images, formulaires) sur une page.",
+        "category": "Frontend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Simulateur d’interface utilisateur",
+        "description": "Créez une application permettant aux développeurs de tester différentes interfaces (navigation, menus, widgets) avant la mise en production.",
+        "category": "Frontend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Application de réalité augmentée (AR)",
+        "description": "Implémentez une application web qui superpose des objets virtuels sur le flux de la caméra, en temps réel, via des bibliothèques AR JS.",
+        "category": "Frontend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Clonage d’un client email (type Gmail)",
+        "description": "Reproduisez une interface utilisateur complexe avec boîte de réception, étiquettes, filtres et recherche avancée.",
+        "category": "Frontend Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Moteur de recherche personnalisé",
+        "description": "Créez un moteur capable d’indexer et de rechercher dans une large base de documents, avec scoring et pertinence.",
+        "category": "Backend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Système de gestion d’identité décentralisé",
+        "description": "Implémentez un système basé sur la blockchain pour gérer les identités numériques, avec validation et révocation sécurisées.",
+        "category": "Backend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Serveur d’automatisation DevOps",
+        "description": "Développez un serveur qui gère les tâches de CI/CD et les déploiements, avec pipelines configurables et logs centralisés.",
+        "category": "Backend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Système de gestion des droits numériques (DRM)",
+        "description": "Protégez les fichiers multimédias contre la copie non autorisée en gérant des clés de chiffrement et des licences.",
+        "category": "Backend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Gestionnaire d’événements en temps réel",
+        "description": "Implémentez un back-end capable de gérer des millions d’événements simultanés (ex : via WebSockets ou une architecture pub/sub).",
+        "category": "Backend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Système anti-fraude basé sur l’IA",
+        "description": "Détectez les transactions suspectes dans une base de données financière en entraînant un modèle de machine learning.",
+        "category": "Backend Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Service d’analyse prédictive",
+        "description": "Implémentez un service d’apprentissage automatique qui prédit des tendances ou comportements (ex : ventes, churn client).",
+        "category": "Backend Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Plateforme complète d’e-learning (type Coursera)",
+        "description": "Intégrez cours vidéo, quiz interactifs, forums et certificats, avec suivi de progression des étudiants.",
+        "category": "Web Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Marketplace multi-vendeurs (type Amazon)",
+        "description": "Permettez à des vendeurs tiers de lister leurs produits, gérez les paiements et le suivi des expéditions sur la même plateforme.",
+        "category": "Web Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Réseau social complet (type LinkedIn)",
+        "description": "Incluez profils détaillés, messagerie, recommandations et flux d’actualités personnalisés, avec gestion d’offres d’emploi.",
+        "category": "Web Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Application collaborative avancée (type Notion)",
+        "description": "Développez une plateforme pour organiser des notes, tâches et bases de données partagées, avec édition en temps réel.",
+        "category": "Web Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Système complet de gestion hospitalière",
+        "description": "Gérez les patients, médecins, rendez-vous et prescriptions, avec dossiers médicaux sécurisés et intégration de planning.",
+        "category": "Web Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Clonage simplifié d’un système ERP",
+        "description": "Implémentez un système pour gérer les ressources humaines, la comptabilité et la logistique d’une entreprise.",
+        "category": "Web Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "IDE personnalisé pour développeurs",
+        "description": "Créez un environnement intégré avec coloration syntaxique, complétion automatique et un débogueur intégré.",
+        "category": "Desktop Application Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Application avancée pour montage vidéo",
+        "description": "Incluez des fonctionnalités de découpage, d’effets et de transitions, avec exportation multi-formats et timeline modifiable.",
+        "category": "Desktop Application Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Simulateur financier pour entreprises",
+        "description": "Analysez des données financières et fournissez des prévisions basées sur des algorithmes complexes (modèles statistiques ou ML).",
+        "category": "Desktop Application Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Système avancé de gestion documentaire (DMS)",
+        "description": "Organisez, indexez et recherchez dans une grande base documentaire, avec contrôle de version et métadonnées.",
+        "category": "Desktop Application Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Application mobile AR/VR avancée",
+        "description": "Intégrez la réalité augmentée ou virtuelle dans une application mobile immersive, avec interactions en temps réel.",
+        "category": "Mobile App Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Application mobile complète pour freelances (type Fiverr)",
+        "description": "Connectez freelances et clients avec messagerie intégrée, paiements sécurisés et profil détaillé.",
+        "category": "Mobile App Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Assistant personnel basé sur l’IA",
+        "description": "Implémentez un assistant vocal intelligent sur mobile, capable d’exécuter diverses tâches et de s’adapter aux préférences de l’utilisateur.",
+        "category": "Mobile App Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Système distribué pour traitement Big Data",
+        "description": "Concevez une architecture capable de traiter des téraoctets de données en temps réel (ex: Hadoop, Spark) sur plusieurs nœuds.",
+        "category": "Cloud Computing",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Service SaaS complet pour entreprises (type Slack)",
+        "description": "Hébergez une plateforme collaborative entièrement dans le cloud, avec canaux de discussion, partages de fichiers, etc.",
+        "category": "Cloud Computing",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Infrastructure serverless personnalisée",
+        "description": "Développez une plateforme permettant aux développeurs d’exécuter du code sans gérer de serveurs, avec facturation à l’usage.",
+        "category": "Cloud Computing",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Clonage complet d’une application bancaire en ligne",
+        "description": "Gérez la connexion sécurisée, la consultation de comptes, les virements, les notifications en temps réel, etc.",
+        "category": "Full Stack Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Plateforme avancée pour crowdfunding (type Kickstarter)",
+        "description": "Permettez de lancer ou de soutenir des projets, gérez les paiements et proposez un tableau de bord de suivi détaillé.",
+        "category": "Full Stack Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "API de gestion d’un système de livraison mondial",
+        "description": "Implémentez une API RESTful pour gérer commandes, itinéraires et suivi en temps réel des livraisons à l’international.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "API pour un moteur de recommandations",
+        "description": "Créez une API qui utilise des algorithmes de machine learning pour recommander des produits, des vidéos ou des articles.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "API pour un système de réservation d’avions",
+        "description": "Gérez les vols, les réservations, les paiements et les annulations, avec gestion des disponibilités en temps réel.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "API pour la gestion des ressources humaines (HR)",
+        "description": "Permettez la gestion des employés, des congés, des fiches de paie et des évaluations, via un ensemble de routes sécurisées.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "API d’analyse d’image",
+        "description": "Développez une API capable d’analyser des images pour détecter objets ou visages, grâce à des modèles de deep learning.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "API pour un service de traduction automatique",
+        "description": "Implémentez une API qui traduit du texte entre plusieurs langues à l’aide de modèles NLP pré-entraînés.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "API pour un système boursier",
+        "description": "Fournissez des données en temps réel sur les actions et indices, avec un historique des cours et des analyses de tendance.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "API pour un service de gestion IoT",
+        "description": "Gérez des appareils connectés via une API centralisée, permettant de configurer et de suivre les capteurs à distance.",
+        "category": "API Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Système avancé de détection d’intrusion (IDS)",
+        "description": "Analysez le trafic réseau en temps réel pour détecter des comportements malveillants ou suspects, avec un moteur de règles.",
+        "category": "Security Software Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Outil avancé de gestion des mots de passe",
+        "description": "Générez, stockez et synchronisez les mots de passe de l’utilisateur, en assurant une forte sécurité (chiffrement, MFA, etc.).",
+        "category": "Security Software Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Scanner complet de vulnérabilités web",
+        "description": "Identifiez les failles XSS, SQL Injection et autres vulnérabilités courantes, en testant automatiquement les endpoints.",
+        "category": "Security Software Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Système de chiffrement basé sur blockchain",
+        "description": "Utilisez la technologie blockchain pour crypter et partager des fichiers, avec un contrôle décentralisé des clés.",
+        "category": "Security Software Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Application anti-phishing basée sur l’IA",
+        "description": "Détectez les emails frauduleux en analysant leur contenu et les liens suspects grâce à un modèle d’apprentissage machine.",
+        "category": "Security Software Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Outil avancé de surveillance réseau",
+        "description": "Analysez le trafic réseau en temps réel pour détecter des anomalies, attaques potentielles ou goulots d’étranglement.",
+        "category": "Security Software Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Système d’authentification biométrique",
+        "description": "Implémentez la reconnaissance faciale ou d’empreintes digitales pour authentifier des utilisateurs, en veillant à la sécurité des données.",
+        "category": "Security Software Development",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Système distribué pour calcul scientifique intensif",
+        "description": "Implémentez une infrastructure cloud capable d’exécuter des simulations complexes (physique, biologie) sur plusieurs nœuds.",
+        "category": "Cloud Computing",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Service cloud pour gestion vidéo en direct (type Twitch)",
+        "description": "Hébergez une plateforme capable de diffuser des vidéos en direct avec une faible latence et une gestion des spectateurs.",
+        "category": "Cloud Computing",
+        "difficulty": "hard"
+      },
+  
+      {
+        "title": "Clonage complet d’un CRM avancé (type Salesforce)",
+        "description": "Incluez la gestion des clients, le suivi commercial, un pipeline de vente et des tableaux analytiques interactifs.",
+        "category": "Full Stack Development",
+        "difficulty": "hard"
+      },
+      {
+        "title": "Plateforme complète pour location immobilière (type Airbnb)",
+        "description": "Intégrez la recherche, la réservation, la messagerie, les paiements sécurisés, et un système d’évaluation des hôtes et visiteurs.",
+        "category": "Full Stack Development",
+        "difficulty": "hard"
+      }
+    
+
+    ]
+  }
