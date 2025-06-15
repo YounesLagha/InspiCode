@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspiCode - Générateur d'idées de projets</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    InspiCode
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#about">À propos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">
+                        Générateur d'idées de projets pour développeurs
+                </div>
+                
+                <h1 class="hero-title">
+                    Trouvez votre prochain<br>
+                    projet de code
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Découvrez des idées de projets personnalisées selon votre niveau et vos préférences. 
+                    L'inspiration parfaite pour enrichir votre portfolio.
+                </p>
+                
+                <div class="button-group">
+                    <a href="/choose" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                        Explorer les projets
+                    </a>
+                    <button onclick="getRandomProject()" class="btn btn-secondary">
+                        <i class="fas fa-dice"></i>
+                        Projet aléatoire
+                    </button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Idées de projets</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Catégories</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Niveaux</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Pourquoi InspiCode ?</h2>
+                <p class="section-subtitle">
+                    Conçu par des développeurs, pour des développeurs. Chaque fonctionnalité est pensée pour maximiser votre productivité.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h3 class="feature-title">Filtrage intelligent</h3>
+                        <p class="feature-description">
+                            Trouvez instantanément des projets adaptés à votre niveau et à vos domaines d'intérêt.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="feature-title">Inspiration illimitée</h3>
+                        <p class="feature-description">
+                            Des projets web, mobile, IA, cybersécurité... Plus jamais à court d'idées.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="feature-title">Boost ton portfolio</h3>
+                        <p class="feature-description">
+                            Des projets spécialement sélectionnés pour enrichir votre CV et impressionner les recruteurs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-card">
+                    <h2 class="section-title">À propos d'InspiCode</h2>
+                    <p class="about-text">
+                        Né de la frustration de regarder un écran blanc en se demandant "qu'est-ce que je pourrais bien coder ?", 
+                        InspiCode est la solution que tout développeur attendait. Fini le syndrome de la page blanche !
+                    </p>
+                    <div class="hero-badge">
+                        A ecrire 
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 InspiCode. </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Votre projet du jour : </h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-body">
+                <!--pas encore faite-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
