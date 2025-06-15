@@ -7,14 +7,18 @@ import json
 import random
 
 app = FastAPI(title="InspiCode API", description="API pour générer des idées de projets de programmation")
+
+# Monter les fichiers statiques
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# Modèle Pydantic pour les projets
 class Project(BaseModel):
     title: str
     description: str
     category: str
     difficulty: str
 
+# Charger les données au démarrage
 with open("Projets.json", "r", encoding="utf-8") as f:
     data = json.load(f)
     all_projects = data["Projets"]
@@ -36,16 +40,12 @@ async def get_projects(
     difficulty: Optional[str] = Query(None, description="Difficulté: easy, medium, hard"),
     category: Optional[str] = Query(None, description="Catégorie du projet")
 ):
-    """
-    Récupère la liste des projets filtrés selon les critères
-    """
+    """Récupère la liste des projets filtrés selon les critères"""
     filtered = []
     
     for proj in all_projects:
-        # Filtrer par difficulté
         if difficulty and proj["difficulty"].lower() != difficulty.lower():
             continue
-        # Filtrer par catégorie
         if category and category.lower() not in proj["category"].lower():
             continue
         filtered.append(proj)
@@ -57,9 +57,7 @@ async def get_random_project(
     difficulty: Optional[str] = Query(None, description="Difficulté: easy, medium, hard"),
     category: Optional[str] = Query(None, description="Catégorie du projet")
 ):
-    """
-    Retourne un projet aléatoire selon les critères
-    """
+    """Retourne un projet aléatoire selon les critères"""
     filtered = []
     
     for proj in all_projects:
@@ -76,17 +74,13 @@ async def get_random_project(
 
 @app.get("/api/categories")
 async def get_categories():
-    """
-    Retourne la liste des catégories disponibles
-    """
+    """Retourne la liste des catégories disponibles"""
     categories = list(set(proj["category"] for proj in all_projects))
     return {"categories": sorted(categories)}
 
 @app.get("/api/difficulties")
 async def get_difficulties():
-    """
-    Retourne la liste des difficultés disponibles
-    """
+    """Retourne la liste des difficultés disponibles"""
     difficulties = list(set(proj["difficulty"] for proj in all_projects))
     return {"difficulties": sorted(difficulties)}
 
