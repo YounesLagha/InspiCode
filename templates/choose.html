@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InspiCode - Explorer les projets</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/choose.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="container">
+      <div class="nav">
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-code"></i></div>
+          InspiCode
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="#choose">Explorer</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" id="choose">
+    <h1 class="section-title">Explorer les projets</h1>
+
+    <section class="filter-section">
+      <form id="filter-form">
+        <input type="text" id="search-input" placeholder="Rechercher par mot-clé…" />
+        <select id="category-select">
+          <option value="">Toutes catégories</option>
+        </select>
+        <select id="difficulty-select">
+          <option value="">Tous niveaux</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Appliquer</button>
+      </form>
+    </section>
+
+    <section id="projects-container" class="features-grid"></section>
+
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Détails du projet</h3>
+        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">&copy; 2025 InspiCode.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script src="/static/choose.js" defer></script>
+</body>
+</html>
