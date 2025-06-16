@@ -1,0 +1,67 @@
+.filter-section {
+  margin: 3rem 0;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+#filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+#filter-form input[type="text"],
+#filter-form select {
+  flex: 1 1 200px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+#filter-form button {
+  flex: 0 0 auto;
+}
+
+/* Grille de cartes */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0 4rem;
+}
+.pagination button {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.pagination button.active,
+.pagination button:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
