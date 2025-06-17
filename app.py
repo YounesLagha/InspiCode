@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 import json
 import random
+import os
 
 app = FastAPI(title="InspiCode API", description="API pour générer des idées de projets de programmation")
 
@@ -18,22 +19,36 @@ class Project(BaseModel):
     category: str
     difficulty: str
 
-# Charger les données au démarrage
-with open("Projets.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
-    all_projects = data["Projets"]
+# Charger les données au démarrage avec gestion d'erreur
+try:
+    with open("Projets.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+        all_projects = data["Projets"]
+    print(f"✅ {len(all_projects)} projets chargés avec succès!")
+except FileNotFoundError:
+    print("❌ Erreur: Fichier Projets.json non trouvé!")
+    all_projects = []
+except json.JSONDecodeError:
+    print("❌ Erreur: Format JSON invalide dans Projets.json!")
+    all_projects = []
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     """Page d'accueil"""
-    with open("templates/index.html", "r", encoding="utf-8") as f:
-        return HTMLResponse(content=f.read())
+    try:
+        with open("templates/index.html", "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Page d'accueil non trouvée")
 
 @app.get("/choose", response_class=HTMLResponse)
 async def choose_page():
     """Page de sélection des critères"""
-    with open("templates/choose.html", "r", encoding="utf-8") as f:
-        return HTMLResponse(content=f.read())
+    try:
+        with open("templates/choose.html", "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Page choose non trouvée")
 
 @app.get("/api/projects", response_model=List[Project])
 async def get_projects(
@@ -41,11 +56,16 @@ async def get_projects(
     category: Optional[str] = Query(None, description="Catégorie du projet")
 ):
     """Récupère la liste des projets filtrés selon les critères"""
+    if not all_projects:
+        raise HTTPException(status_code=500, detail="Aucun projet disponible")
+    
     filtered = []
     
     for proj in all_projects:
+        # Filtrer par difficulté
         if difficulty and proj["difficulty"].lower() != difficulty.lower():
             continue
+        # Filtrer par catégorie (recherche partielle)
         if category and category.lower() not in proj["category"].lower():
             continue
         filtered.append(proj)
@@ -58,6 +78,9 @@ async def get_random_project(
     category: Optional[str] = Query(None, description="Catégorie du projet")
 ):
     """Retourne un projet aléatoire selon les critères"""
+    if not all_projects:
+        raise HTTPException(status_code=500, detail="Aucun projet disponible")
+    
     filtered = []
     
     for proj in all_projects:
@@ -75,14 +98,45 @@ async def get_random_project(
 @app.get("/api/categories")
 async def get_categories():
     """Retourne la liste des catégories disponibles"""
+    if not all_projects:
+        return {"categories": []}
+    
     categories = list(set(proj["category"] for proj in all_projects))
     return {"categories": sorted(categories)}
 
 @app.get("/api/difficulties")
 async def get_difficulties():
     """Retourne la liste des difficultés disponibles"""
+    if not all_projects:
+        return {"difficulties": []}
+    
     difficulties = list(set(proj["difficulty"] for proj in all_projects))
     return {"difficulties": sorted(difficulties)}
+
+@app.get("/api/stats")
+async def get_stats():
+    """Retourne les statistiques du site"""
+    if not all_projects:
+        return {"total_projects": 0, "categories": 0, "difficulties": 0}
+    
+    categories = set(proj["category"] for proj in all_projects)
+    difficulties = set(proj["difficulty"] for proj in all_projects)
+    
+    return {
+        "total_projects": len(all_projects),
+        "categories": len(categories),
+        "difficulties": len(difficulties)
+    }
+
+# Route de santé pour vérifier que l'API fonctionne
+@app.get("/health")
+async def health_check():
+    """Vérification de l'état de l'API"""
+    return {
+        "status": "healthy",
+        "projects_loaded": len(all_projects),
+        "message": "InspiCode API is running!"
+    }
 
 if __name__ == "__main__":
     import uvicorn
