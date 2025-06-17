@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InspiCode - Générateur d'idées de projets</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -12,12 +11,12 @@
     <header class="header">
         <nav class="container">
             <div class="nav">
-                <div class="logo">
+                <a href="/" class="logo">
                     <div class="logo-icon">
-                        <i class="fas fa-code"></i>
+                        &lt;/&gt;
                     </div>
                     InspiCode
-                </div>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#features">Fonctionnalités</a></li>
                     <li><a href="#about">À propos</a></li>
@@ -30,7 +29,7 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-badge">
-                        Générateur d'idées de projets pour développeurs
+                    ✨ Générateur d'idées de projets pour développeurs
                 </div>
                 
                 <h1 class="hero-title">
@@ -45,22 +44,20 @@
                 
                 <div class="button-group">
                     <a href="/choose" class="btn btn-primary">
-                        <i class="fas fa-search"></i>
-                        Explorer les projets
+                        🔍 Explorer les projets
                     </a>
                     <button onclick="getRandomProject()" class="btn btn-secondary">
-                        <i class="fas fa-dice"></i>
-                        Projet aléatoire
+                        🎲 Projet aléatoire
                     </button>
                 </div>
 
-                <div class="stats">
+                <div class="stats" id="stats-container">
                     <div class="stat-card">
-                        <div class="stat-number">100+</div>
+                        <div class="stat-number" id="total-projects">150+</div>
                         <div class="stat-label">Idées de projets</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">8</div>
+                        <div class="stat-number" id="total-categories">10</div>
                         <div class="stat-label">Catégories</div>
                     </div>
                     <div class="stat-card">
@@ -81,7 +78,7 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-filter"></i>
+                            🔧
                         </div>
                         <h3 class="feature-title">Filtrage intelligent</h3>
                         <p class="feature-description">
@@ -91,7 +88,7 @@
                     
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-lightbulb"></i>
+                            💡
                         </div>
                         <h3 class="feature-title">Inspiration illimitée</h3>
                         <p class="feature-description">
@@ -101,7 +98,7 @@
                     
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-rocket"></i>
+                            🚀
                         </div>
                         <h3 class="feature-title">Boost ton portfolio</h3>
                         <p class="feature-description">
@@ -121,7 +118,7 @@
                         InspiCode est la solution que tout développeur attendait. Fini le syndrome de la page blanche !
                     </p>
                     <div class="hero-badge">
-                        A ecrire 
+                        Fait avec ❤️ pour la communauté des développeurs
                     </div>
                 </div>
             </div>
@@ -131,24 +128,26 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2025 InspiCode. </p>
+                <p class="footer-text">&copy; 2025 InspiCode. Propulsé par la passion du code.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Modal pour projet aléatoire -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title">Votre projet du jour : </h3>
+                <h3 class="modal-title">Votre projet du jour ✨</h3>
                 <button class="modal-close" onclick="closeModal()">
-                    <i class="fas fa-times"></i>
+                    ✕
                 </button>
             </div>
             <div id="modal-body">
-                <!--pas encore faite-->
+                <!-- Le contenu sera injecté ici -->
             </div>
         </div>
     </div>
+
+    <script src="/static/script.js"></script>
 </body>
 </html>
