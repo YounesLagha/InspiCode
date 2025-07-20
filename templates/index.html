@@ -1,153 +1,97 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InspiCode - Générateur d'idées de projets</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InspiCode - Générateur d'idées de projets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="container">
-            <div class="nav">
-                <a href="/" class="logo">
-                    <div class="logo-icon">
-                        &lt;/&gt;
-                    </div>
-                    InspiCode
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#features">Fonctionnalités</a></li>
-                    <li><a href="#about">À propos</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-badge">
-                    ✨ Générateur d'idées de projets pour développeurs
-                </div>
-                
-                <h1 class="hero-title">
-                    Trouvez votre prochain<br>
-                    projet de code
-                </h1>
-                
-                <p class="hero-subtitle">
-                    Découvrez des idées de projets personnalisées selon votre niveau et vos préférences. 
-                    L'inspiration parfaite pour enrichir votre portfolio.
-                </p>
-                
-                <div class="button-group">
-                    <a href="/choose" class="btn btn-primary">
-                        🔍 Explorer les projets
-                    </a>
-                    <button onclick="getRandomProject()" class="btn btn-secondary">
-                        🎲 Projet aléatoire
-                    </button>
-                </div>
-
-                <div class="stats" id="stats-container">
-                    <div class="stat-card">
-                        <div class="stat-number" id="total-projects">150+</div>
-                        <div class="stat-label">Idées de projets</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="total-categories">10</div>
-                        <div class="stat-label">Catégories</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Niveaux</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <h2 class="section-title">Pourquoi InspiCode ?</h2>
-                <p class="section-subtitle">
-                    Conçu par des développeurs, pour des développeurs. Chaque fonctionnalité est pensée pour maximiser votre productivité.
-                </p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            🔧
-                        </div>
-                        <h3 class="feature-title">Filtrage intelligent</h3>
-                        <p class="feature-description">
-                            Trouvez instantanément des projets adaptés à votre niveau et à vos domaines d'intérêt.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            💡
-                        </div>
-                        <h3 class="feature-title">Inspiration illimitée</h3>
-                        <p class="feature-description">
-                            Des projets web, mobile, IA, cybersécurité... Plus jamais à court d'idées.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            🚀
-                        </div>
-                        <h3 class="feature-title">Boost ton portfolio</h3>
-                        <p class="feature-description">
-                            Des projets spécialement sélectionnés pour enrichir votre CV et impressionner les recruteurs.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <div class="about-card">
-                    <h2 class="section-title">À propos d'InspiCode</h2>
-                    <p class="about-text">
-                        Né de la frustration de regarder un écran blanc en se demandant "qu'est-ce que je pourrais bien coder ?", 
-                        InspiCode est la solution que tout développeur attendait. Fini le syndrome de la page blanche !
-                    </p>
-                    <div class="hero-badge">
-                        Fait avec ❤️ pour la communauté des développeurs
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">&copy; 2025 InspiCode. Propulsé par la passion du code.</p>
-            </div>
+  <header class="header">
+    <nav class="container">
+      <div class="nav">
+        <a href="/" class="logo">
+          <div class="logo-icon">&lt;/&gt;</div>
+          InspiCode
+        </a>
+        <div class="nav-content">
+          <ul class="nav-links">
+            <li><a href="/choose">Explorer</a></li>
+            <li><a href="/favorites">Mes Favoris</a></li>
+            <li><a href="#about">À propos</a></li>
+          </ul>
+          <button id="theme-toggle">🌙</button>
         </div>
-    </footer>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Modal pour projet aléatoire -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Votre projet du jour ✨</h3>
-                <button class="modal-close" onclick="closeModal()">
-                    ✕
-                </button>
-            </div>
-            <div id="modal-body">
-                <!-- Le contenu sera injecté ici -->
-            </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          Générateur d'idées de projets pour développeurs
         </div>
+        <h1 class="hero-title">Trouvez votre prochain projet de code</h1>
+        <p class="hero-subtitle">
+          Des idées personnalisées selon votre niveau et vos préférences. Idéal pour enrichir votre portfolio.
+        </p>
+        <div class="button-group">
+          <a href="/choose" class="btn btn-primary">Explorer les projets</a>
+          <button onclick="getRandomProject()" class="btn btn-secondary">Projet aléatoire</button>
+        </div>
+        <div class="stats" id="stats-container">
+          <div class="stat-card">
+            <div class="stat-number" id="total-projects">150+</div>
+            <div class="stat-label">Idées de projets</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="total-categories">10</div>
+            <div class="stat-label">Catégories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Niveaux</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-card">
+          <h2 class="section-title">Pourquoi InspiCode ?</h2>
+          <p class="about-text">
+            Pensé pour les développeurs, chaque fonctionnalité vous aide à trouver des projets motivants et à progresser.
+          </p>
+          <div class="hero-badge">
+            Fait avec passion pour la communauté
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">&copy; 2025 InspiCode.</p>
+      </div>
     </div>
+  </footer>
 
-    <script src="/static/script.js"></script>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Projet aléatoire</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="/static/js/script.js"></script>
 </body>
 </html>

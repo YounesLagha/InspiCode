@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspiCode - Mes Favoris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/choose.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <a href="/" class="logo">
+                    <div class="logo-icon">
+                        &lt;/&gt;
+                    </div>
+                    InspiCode
+                </a>
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/choose">Explorer</a></li>
+                        <li><a href="/favorites">Mes Favoris</a></li>
+                    </ul>
+                    <button id="theme-toggle">🌙</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero" style="padding: 3rem 0;">
+            <h1 class="hero-title" style="font-size: 2.5rem;">
+                ⭐ Mes Favoris
+            </h1>
+            <p class="hero-subtitle">
+                Retrouvez tous vos projets sauvegardés
+            </p>
+            <div class="hero-badge" id="favorites-count">
+                0 projets sauvegardés
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; padding: 1rem; flex-wrap: wrap;">
+                <button onclick="clearAllFavorites()" class="btn btn-secondary" style="background: #ef4444; color: white;">
+                    🗑️ Vider tous les favoris
+                </button>
+                <button onclick="exportFavorites()" class="btn btn-secondary">
+                    📤 Exporter en JSON
+                </button>
+            </div>
+        </section>
+
+        <section id="favorites-container" class="features-grid">
+            <!-- Les favoris seront injectés ici -->
+        </section>
+
+        <section id="empty-state" class="about" style="display: none;">
+            <div class="about-card">
+                <div class="feature-icon">💡</div>
+                <h2 class="section-title">Aucun favori pour le moment</h2>
+                <p class="about-text">
+                    Commencez par explorer nos projets et ajoutez-les à vos favoris en cliquant sur l'étoile !
+                </p>
+                <div class="button-group">
+                    <a href="/choose" class="btn btn-primary">
+                        🔍 Explorer les projets
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 InspiCode. Fait avec ❤️ pour les développeurs.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Chargement des favoris
+        function loadFavorites() {
+            const favorites = getFavorites();
+            const container = document.getElementById('favorites-container');
+            const emptyState = document.getElementById('empty-state');
+            const countElement = document.getElementById('favorites-count');
+
+            // Mettre à jour le compteur
+            countElement.textContent = `${favorites.length} projet${favorites.length > 1 ? 's' : ''} sauvegardé${favorites.length > 1 ? 's' : ''}`;
+
+            if (favorites.length === 0) {
+                container.style.display = 'none';
+                emptyState.style.display = 'block';
+            } else {
+                container.style.display = 'grid';
+                emptyState.style.display = 'none';
+
+                // Trier par date d'ajout (plus récent en premier)
+                const sortedFavorites = favorites.sort((a, b) => 
+                    new Date(b.addedAt) - new Date(a.addedAt)
+                );
+
+                container.innerHTML = sortedFavorites.map(favorite => `
+                    <div class="feature-card" style="position: relative; cursor: pointer;" onclick='showProjectDetails(${JSON.stringify(favorite)})'>
+                        <div class="project-tags">
+                            <span class="tag tag-category">📂 ${favorite.category}</span>
+                            <span class="tag tag-difficulty ${favorite.difficulty === 'medium' ? 'medium' : favorite.difficulty === 'hard' ? 'hard' : ''}">
+                                ${favorite.difficulty === 'easy' ? '🟢 Facile' : 
+                                  favorite.difficulty === 'medium' ? '🟡 Moyen' : '🔴 Difficile'}
+                            </span>
+                        </div>
+                        <h3 class="feature-title">${favorite.title}</h3>
+                        <p class="feature-description">${favorite.description.substring(0, 120)}${favorite.description.length > 120 ? '...' : ''}</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-secondary);">
+                            ⭐ Ajouté ${formatDate(favorite.addedAt)}
+                        </div>
+                        <button onclick="event.stopPropagation(); removeFavorite('${favorite.title}')" 
+                                class="btn btn-secondary" 
+                                style="position: absolute; top: 10px; right: 10px; padding: 0.5rem; min-width: auto; background: #ef4444; color: white;">
+                            🗑️
+                        </button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Fonctions utilitaires
+        function getFavorites() {
+            try {
+                const raw = localStorage.getItem("inspicode_favorites");
+                return raw ? JSON.parse(raw) : [];
+            } catch (error) {
+                console.error('Erreur:', error);
+                return [];
+            }
+        }
+
+        function saveFavorites(favorites) {
+            localStorage.setItem("inspicode_favorites", JSON.stringify(favorites));
+        }
+
+        function removeFavorite(title) {
+            const favorites = getFavorites();
+            const updatedFavorites = favorites.filter(f => f.title !== title);
+            saveFavorites(updatedFavorites);
+            loadFavorites();
+            showNotification('🗑️ Projet retiré des favoris', 'info');
+        }
+
+        function clearAllFavorites() {
+            if (confirm('Êtes-vous sûr de vouloir supprimer tous vos favoris ?')) {
+                localStorage.removeItem("inspicode_favorites");
+                loadFavorites();
+                showNotification('🗑️ Tous les favoris ont été supprimés', 'info');
+            }
+        }
+
+        function exportFavorites() {
+            const favorites = getFavorites();
+            if (favorites.length === 0) {
+                showNotification('Aucun favori à exporter', 'warning');
+                return;
+            }
+
+            const exportData = {
+                exportDate: new Date().toISOString(),
+                totalFavorites: favorites.length,
+                favorites: favorites
+            };
+
+            const dataStr = JSON.stringify(exportData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = `inspicode_favoris_${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+
+            showNotification('📤 Favoris exportés avec succès!', 'success');
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diff = now - date;
+
+            const minutes = Math.floor(diff / (1000 * 60));
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+            if (minutes < 60) {
+                return `il y a ${minutes} min`;
+            } else if (hours < 24) {
+                return `il y a ${hours}h`;
+            } else if (days < 7) {
+                return `il y a ${days} jour${days > 1 ? 's' : ''}`;
+            } else {
+                return date.toLocaleDateString('fr-FR');
+            }
+        }
+
+        function showProjectDetails(project) {
+            alert(`Projet: ${project.title}\n\nDescription: ${project.description}\n\nCatégorie: ${project.category}\nDifficulté: ${project.difficulty}`);
+        }
+
+        function showNotification(message, type = "info") {
+            let notification = document.getElementById('notification');
+            if (!notification) {
+                notification = document.createElement('div');
+                notification.id = 'notification';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    padding: 1rem 1.5rem;
+                    border-radius: 8px;
+                    color: white;
+                    font-weight: 500;
+                    z-index: 10000;
+                    opacity: 0;
+                    transform: translateX(100%);
+                    transition: all 0.3s ease;
+                    max-width: 300px;
+                `;
+                document.body.appendChild(notification);
+            }
+
+            const colors = {
+                success: '#10b981',
+                info: '#3b82f6',
+                warning: '#f59e0b',
+                error: '#ef4444'
+            };
+
+            notification.style.backgroundColor = colors[type] || colors.info;
+            notification.textContent = message;
+
+            // Animer l'apparition
+            setTimeout(() => {
+                notification.style.opacity = '1';
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Faire disparaître après 3 secondes
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+            }, 3000);
+        }
+
+        // Theme toggle
+        function initTheme() {
+            const toggle = document.getElementById("theme-toggle");
+            const storedTheme = localStorage.getItem("theme");
+
+            if (storedTheme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                toggle.textContent = "☀️";
+            }
+
+            toggle.addEventListener("click", () => {
+                const currentTheme = document.documentElement.getAttribute("data-theme");
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                
+                document.documentElement.setAttribute("data-theme", newTheme);
+                toggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+                localStorage.setItem("theme", newTheme);
+            });
+        }
+
+        // Charger les favoris au démarrage
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFavorites();
+            initTheme();
+        });
+    </script>
+</body>
+</html>
