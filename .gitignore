@@ -1,0 +1,17 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# --- FastAPI / Uvicorn logs ---
+*.log
+
+# --- IDEs / éditeurs ---
+.vscode/
+.idea/
+*.swp
+
+# --- macOS / Windows ---
+.DS_Store
+Thumbs.db

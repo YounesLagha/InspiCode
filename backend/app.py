@@ -1,27 +1,29 @@
 from fastapi import FastAPI, Query, HTTPException
 from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 from fastapi.responses import HTMLResponse
-from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional, List
 import json
 import random
-import os
 
 app = FastAPI(title="InspiCode API", description="API pour générer des idées de projets de programmation")
+
+# Configuration CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Monter les fichiers statiques
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Modèle Pydantic pour les projets
-class Project(BaseModel):
-    title: str
-    description: str
-    category: str
-    difficulty: str
-
-# Charger les données au démarrage avec gestion d'erreur
+# Charger les données au démarrage
 try:
-    with open("Projets.json", "r", encoding="utf-8") as f:
+    with open("static/data/Projets.json", "r", encoding="utf-8") as f:
         data = json.load(f)
         all_projects = data["Projets"]
     print(f"✅ {len(all_projects)} projets chargés avec succès!")
@@ -32,6 +34,7 @@ except json.JSONDecodeError:
     print("❌ Erreur: Format JSON invalide dans Projets.json!")
     all_projects = []
 
+# Routes pour les pages HTML
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     """Page d'accueil"""
@@ -50,10 +53,21 @@ async def choose_page():
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail="Page choose non trouvée")
 
-@app.get("/api/projects", response_model=List[Project])
+@app.get("/favorites", response_class=HTMLResponse)
+async def favorites_page():
+    """Page des favoris"""
+    try:
+        with open("templates/favorites.html", "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Page favorites non trouvée")
+
+# Routes API
+@app.get("/api/projects")
 async def get_projects(
     difficulty: Optional[str] = Query(None, description="Difficulté: easy, medium, hard"),
-    category: Optional[str] = Query(None, description="Catégorie du projet")
+    category: Optional[str] = Query(None, description="Catégorie du projet"),
+    search: Optional[str] = Query(None, description="Recherche dans le titre et description")
 ):
     """Récupère la liste des projets filtrés selon les critères"""
     if not all_projects:
@@ -65,14 +79,21 @@ async def get_projects(
         # Filtrer par difficulté
         if difficulty and proj["difficulty"].lower() != difficulty.lower():
             continue
-        # Filtrer par catégorie (recherche partielle)
+        # Filtrer par catégorie
         if category and category.lower() not in proj["category"].lower():
             continue
+        # Filtrer par recherche textuelle
+        if search:
+            search_lower = search.lower()
+            if (search_lower not in proj["title"].lower() and 
+                search_lower not in proj["description"].lower()):
+                continue
+        
         filtered.append(proj)
     
     return filtered
 
-@app.get("/api/random", response_model=Project)
+@app.get("/api/random")
 async def get_random_project(
     difficulty: Optional[str] = Query(None, description="Difficulté: easy, medium, hard"),
     category: Optional[str] = Query(None, description="Catégorie du projet")
@@ -115,7 +136,7 @@ async def get_difficulties():
 
 @app.get("/api/stats")
 async def get_stats():
-    """Retourne les statistiques du site"""
+    """Retourne les statistiques basiques du site"""
     if not all_projects:
         return {"total_projects": 0, "categories": 0, "difficulties": 0}
     
@@ -128,7 +149,6 @@ async def get_stats():
         "difficulties": len(difficulties)
     }
 
-# Route de santé pour vérifier que l'API fonctionne
 @app.get("/health")
 async def health_check():
     """Vérification de l'état de l'API"""
