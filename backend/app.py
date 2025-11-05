@@ -26,17 +26,18 @@ try:
     with open("static/data/Projets.json", "r", encoding="utf-8") as f:
         data = json.load(f)
         all_projects = data["Projets"]
-    print(f"✅ {len(all_projects)} projets chargés avec succès!")
+    print(f" {len(all_projects)} projets chargés avec succès!")
 except FileNotFoundError:
-    print("❌ Erreur: Fichier Projets.json non trouvé!")
+    print(" Erreur: Fichier Projets.json non trouvé!")
     all_projects = []
 except json.JSONDecodeError:
-    print("❌ Erreur: Format JSON invalide dans Projets.json!")
+    print(" Erreur: Format JSON invalide dans Projets.json!")
     all_projects = []
 
 # Routes pour les pages HTML
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
+    
     """Page d'accueil"""
     try:
         with open("templates/index.html", "r", encoding="utf-8") as f:

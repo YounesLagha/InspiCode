@@ -115,7 +115,7 @@ def main():
         run_server()
     else:
         print("💡 Pour lancer le serveur manuellement:")
-        print("   py -m uvicorn backend.app:app --reload")
+        print("   py init.py")
 
 if __name__ == "__main__":
     main()
