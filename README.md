@@ -42,17 +42,15 @@ git clone https://github.com/YounesLagha/inspicode.git
 cd inspicode
 ```
 
-2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the application
+2. Run the application
 ```bash
 py init.py
 ```
+When running `init.py`, the script checks for required dependencies.
+If any are missing, they are automatically installed from `requirements.txt`.
 
-4. Open your browser and navigate to `http://localhost:8000`
+
+3. Open your browser and navigate to `http://localhost:8000`
 
 ## Project Structure
 
